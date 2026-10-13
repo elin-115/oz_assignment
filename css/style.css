@@ -1,11 +1,18 @@
 @charset "UTF-8";
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body, h1, h2, h3, p{margin:0;padding:0}
 a:active,a:hover{font-weight:bold}
 table{display:table;box-sizing:border-box;border:1px solid #000;border-collapse:separate;text-indent:initial;unicode-bidi:isolate;border-spacing:0;}
 table caption{overflow:hidden;width:1px;font-size:1px;line-height:0;text-indent:-9999px;}
 
 header{position:relative;padding:20px;border-bottom:1px solid #000;background-color:#0c4747;color:#fff;}
-header .link_git{position:absolute;top:50%;right:20px;width:100px;margin-top:-14px;height:32px;line-height:33px;border-radius:5px;background-color:#fff;color:#0c4747;text-decoration:none;text-align:center;}
+header .link_git{font-family:"Archivo Black", sans-serif;;position:absolute;top:50%;right:20px;width:100px;margin-top:-14px;height:32px;line-height:33px;border-radius:5px;background-color:#fff;color:#0c4747;text-decoration:none;text-align:center;}
 main{padding:20px;}        
 ul, ol{margin:10px 0 0;padding-left:20px;}
 th, td{overflow:hidden;height:40px;padding:5px 10px;border:1px solid #000;}
