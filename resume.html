@@ -4,101 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개서</title>
-    <style>
-        body, h1, h2, h3, p{margin:0;padding:0}
-        header{position:relative;;padding:20px;border-bottom:1px solid #000;background-color:#0c4747;color:#fff;}
-        a:active,a:hover {font-weight:bold}
-        .go_git{position:absolute;top:50%;right:20px;width:170px;margin-top:-14px;height:32px;line-height:33px;border-radius:5px;background-color:#fff;color:#0c4747;text-decoration:none;text-align:center;}
-        main{padding:20px;}
-        ul, ol{margin:10px 0 0;padding-left:20px;}
-        .box_g{position:relative;margin-bottom:20px;padding:20px;border-radius:5px;border:1px solid #ddd}
-        .box_g h2{margin-bottom:10px;color:#186e79;}
-        .box_g .img_pf{float:left;width:200px;margin-right:10px}
-        .box_g .img_pf + ul{float:left;}
-        .box_g li{margin-top:10px;}
-        .box_g li:first-child{margin-top:0;}
-        .inner_box{position:relative;overflow:hidden;}
-        table{display:table;box-sizing:border-box;border:1px solid #000;border-collapse:separate;text-indent:initial;unicode-bidi:isolate;border-spacing:0;}
-        table caption{overflow:hidden;width:1px;font-size:1px;line-height:0;text-indent:-9999px;}
-        th, td{overflow:hidden;height:40px;padding:5px 10px;border:1px solid #000;}
-        th{background-color:#ddd;}
-        footer{text-align:center;}
-        label, input, button{display:inline-block;vertical-align:top;box-sizing:border-box;}
-        input{padding:0 8px;border:1px solid #bfbfbf;line-height:28px}
-        label{line-height:32px}
-        button{padding:0 10px;border-radius:5px;border:0 none;background-color:#373737;color:#fff;}
-        footer{padding-bottom:20px;font-size:13px;color:#7a7a7a;}
-    </style>
+    <!-- 외부 css(External CSS) -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Resume</h1>
-        <p>안녕하세요. 저에 대해 알아볼까요.😊</p>
-        <a href="https://github.com/elin-115/oz_assignment" class="go_git">내 Repository 바로가기</a>
-    </header>
-    <main>
-        <div class="box_g">
-            <h2>Self Introduction.</h2>
-            <div class="inner_box fst">
-                <img class="img_pf" src="https://scontent-icn2-1.cdninstagram.com/v/t51.82787-15/721576034_18597700813046037_4966218737007488173_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzkyMDUyMTYxMzk2Njk3MDg5MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMjE0My5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=QY5bkVJ6FdwQ7kNvwGKgxhU&_nc_oc=AdqOVlL7Kthov9ZqAmw7ljXSqqgD9TF_65AtQ1PhR5ln3QlHVnYnp5_P9SV_U8Gy8kU&_nc_zt=23&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_gid=_AyNRs1Nr5UBcAos6FJSuw&_nc_ss=7b6a8&oh=00_AQOhbiG2JXX2OK67mhKbuFLefdq7GvnnSdeaqc3DKVpBrw&oe=6AD21E80" alt="Profile Picture">
-                <ul style="list-style:square">
-                    <li>이름:김지연</li>
-                    <li>나이:46</li>
-                    <li>출생년도:1981년</li>
-                    <li>성별:여자</li>
-                    <li>거주지:조선 팔도 강산 어디든</li>
-                </ul>
+    <div id="wrap">
+        <header>
+            <h1>Resume</h1>
+            <p>안녕하세요. 저에 대해 알아볼까요.😊</p>
+            <a href="https://github.com/elin-115/oz_assignment" class="link_git"><i class="fa-brands fa-github"></i>GitHub</a>
+        </header>
+        <main>
+            <div class="box_g">
+                <h2>Self Introduction.</h2>
+                <div class="inner_box fst">
+                    <img class="img_pf" src="https://scontent-icn2-1.cdninstagram.com/v/t51.82787-15/721576034_18597700813046037_4966218737007488173_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzkyMDUyMTYxMzk2Njk3MDg5MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMjE0My5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=QY5bkVJ6FdwQ7kNvwGKgxhU&_nc_oc=AdqOVlL7Kthov9ZqAmw7ljXSqqgD9TF_65AtQ1PhR5ln3QlHVnYnp5_P9SV_U8Gy8kU&_nc_zt=23&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_gid=_AyNRs1Nr5UBcAos6FJSuw&_nc_ss=7b6a8&oh=00_AQOhbiG2JXX2OK67mhKbuFLefdq7GvnnSdeaqc3DKVpBrw&oe=6AD21E80" alt="Profile Picture">
+                    <ul style="list-style:square">
+                        <li>이름:김지연</li>
+                        <li>나이:46</li>
+                        <li>출생년도:1981년</li>
+                        <li>성별:여자</li>
+                        <li>거주지:조선 팔도 강산 어디든</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="box_g">
-            <h2>Hobby & Preference</h2>
-            <ol type="i">
-                <li>취미:등산</li>
-                <li>좋아하는 음식:잡식성</li>
-                <li>좋아하는 영화:???</li>
-                <li>좋아하는 책:???</li>
-                <li>좋아하는 노래 장르:클래식, 팝</li>
-            </ol>
-        </div>
+            <div class="box_g">
+                <h2>Hobby & Preference</h2>
+                <ol type="i">
+                    <li>취미:등산</li>
+                    <li>좋아하는 음식:잡식성</li>
+                    <li>좋아하는 영화:???</li>
+                    <li>좋아하는 책:???</li>
+                    <li>좋아하는 노래 장르:클래식, 팝</li>
+                </ol>
+            </div>
 
-        <div class="box_g">
-            <h2>Career & Work Experience</h2>
-            <table style="table-layout:auto" border="1">
-                <caption>업무 이력표</caption>
-                <thead>
-                    <tr>
-                        <th>회사명</th>
-                        <th>직무</th>
-                        <th>기간</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>키움증권</td>
-                        <td>이것저것</td>
-                        <td>2005 ~ 2012</td>
-                    </tr>
-                    <tr>
-                        <td>여기저기</td>
-                        <td>웹퍼블리셔</td>
-                        <td>2014 ~ 2025</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="box_g">
+                <h2>Career & Work Experience</h2>
+                <table style="table-layout:auto" border="1">
+                    <caption>업무 이력표</caption>
+                    <thead>
+                        <tr>
+                            <th>회사명</th>
+                            <th>직무</th>
+                            <th>기간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>키움증권</td>
+                            <td>이것저것</td>
+                            <td>2005 ~ 2012</td>
+                        </tr>
+                        <tr>
+                            <td>여기저기</td>
+                            <td>웹퍼블리셔</td>
+                            <td>2014 ~ 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <div class="box_g">
-            <h2>Send Cover Letter</h2>
-            <form action="" style="display:flex; gap:10px;">
-                <label for="emailInput">담당자 이메일:</label>
-                <input id="emailInput" type="email" placeholder="email@example.com">
-                <label for="companyInput">회사명:</label>
-                <input id="companyInput" type="text" placeholder="(주)Paper Company">
-                <button type="submit">이력서 전송하기</button>
-            </form>
-        </div>
-    </main>
-    <footer>Copyright &#169; 김지연</footer>
+            <div class="box_g">
+                <h2>Send Cover Letter</h2>
+                <form action="" style="display:flex; gap:10px;">
+                    <label for="emailInput">담당자 이메일:</label>
+                    <input id="emailInput" type="email" placeholder="email@example.com">
+                    <label for="companyInput">회사명:</label>
+                    <input id="companyInput" type="text" placeholder="(주)Paper Company">
+                    <button type="submit">이력서 전송하기</button>
+                </form>
+            </div>
+        </main>
+        <footer>Copyright &#169; 김지연</footer>
+    </div>
 </body>
 </html>
