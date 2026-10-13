@@ -66,9 +66,7 @@ section .txt_g {color: #555;font-size: 1.05em;white-space: pre-line;}
 .name_project {font-weight: 700;font-size: 0.95em;color: #444;}
 .period_project {font-size: 0.8em;color: #999;}
 
-.tbl_education {width: 100%;border-collapse: collapse;margin-bottom: 30px;}
-.tbl_education th {text-align: left;width: 150px;color: #888;font-weight: 400;font-size: 0.9em;padding: 10px 0;}
-.tbl_education td {padding: 10px 0;color: #444;font-weight: 500;}
-
-.header-text a {font-size: 1em;color: #666;text-decoration: none;transition: color 0.3s;}
-.header-text a:hover {text-decoration: underline;}
+/* Education / Awards / Certifications */
+.tbl_resume {width: 100%;border-collapse: collapse;margin-bottom: 30px;}
+.tbl_resume th {text-align: left;width: 150px;color: #888;font-weight: 400;font-size: 0.9em;padding: 10px 0;}
+.tbl_resume td {padding: 10px 0;color: #444;font-weight: 500;}
