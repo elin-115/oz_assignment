@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* web font */
+.archivo-black-regular{font-family: "Archivo Black", sans-serif;font-weight: 400;font-style: normal;}
+
+body {
+    text-align: left;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    background-color:tan;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol{margin:0;padding:0;}
+ul, ol{list-style: none;}
+a{text-decoration:none;}
+.hide{display:none;}
+
+
+.container {min-width: 800px;margin-bottom:40px;padding:92px 40px 40px 170px;background-color: #fff;box-shadow: 0 0 20px rgba(0,0,0,0.05);border-radius: 8px;min-height: calc(100vh - 80px);box-sizing: border-box;}
+
+/* header */
+#resume-header{display:flex;flex-wrap:wrap;gap:10px;position:fixed;top:0;left:0;right:0;height:92px;padding:20px 30px;background-color:rgba(255,255,255,.7);border-bottom: 1px solid #ccc;z-index:10;box-sizing: border-box;}
+h1 {font-size: 2.5em;line-height:1.1;color: #007a8f;}
+.info_list{overflow: hidden;padding-top: 17px;margin-left: 20px}
+.info_list a{color: #666;font-size: 0.95em;}
+.info_list i {width: 20px;color: #555;}
+.link_git{font-family:"Archivo Black", sans-serif;position:absolute;top:50%;right:20px;width:100px;margin-top:-14px;height:32px;line-height:33px;border-radius:5px;border:1px solid #007a8f;background-color:#fff;color:#007a8f;text-decoration:none;text-align:center;}
+.link_git:hover{background-color: #007a8f;color:#fff}
+
+/* nav */
+.sidebar {position: fixed;top: 92px;left: 0;width: 150px;height:calc(100vh - 72px);padding-top: 40px;background-color: #007a8f;color: #fff;z-index:9;}
+.sidebar_menu a{display:block;padding:0 20px;font-weight:400;font-size: 0.95em;line-height:3;color: #fff;transition: color 0.3s;}
+.sidebar_menu a:hover {font-weight:bold;}
+.profile_photo{position:absolute;top:20px;right:20px;}
+.profile_photo img {width: 120px;height: 120px;border-radius: 50%;object-fit: cover;border: 3px solid #eee;}
+
+/* layout */
+main{padding:40px;}
+main h2 {margin-bottom:20px;padding-left: 15px;border-left: 5px solid #333;font-size: 1.5em;color: #222;}
+section{margin-bottom:80px;}
+section .txt_g {color: #555;font-size: 1.05em;white-space: pre-line;}
+
+/* Skills */
+.item_skills {margin-bottom: 20px;padding-left: 15px;}
+.item_skills h3 {font-size: 0.9em;color: #888;margin-bottom: 8px;text-transform: uppercase;letter-spacing: 1px;}
+.detail_skills {display: flex;flex-wrap: wrap;gap: 10px;}
+.tag_skill{background-color: #f0f2f5;color: #476282;padding: 6px 14px;border-radius: 20px;font-size: 0.85em;font-weight: 600;}
+
+/* Experience */
+.item_experience {margin-bottom: 25px;padding-bottom: 15px;border-bottom: 1px solid #f0f0f0;}
+.item_experience:last-child {border-bottom: none;}
+.info_experience {display: flex;justify-content: space-between;align-items: baseline;margin-bottom: 5px;}
+.info_experience .company {font-size: 1.2em;font-weight: 700;color: #222;}
+.info_experience .period {color: #888;font-size: 0.9em;}
+.item_experience .role {margin-bottom: 10px;}
+.item_experience .position {font-weight: 600;color: #555;}
+.item_experience .rank {margin-left: 8px;padding-left: 8px;border-left: 1px solid #ddd;font-weight: 500;font-size: 0.9em;color: #888;}
+.item_experience .details {margin: 0;padding-left: 20px;color: #666;font-size: 0.95em;}
+.item_experience .details li {margin-bottom: 5px;}
+
+/* Projects */
+.project {margin-top: 15px;padding-left: 10px;border-left: 2px solid #eee;}
+.project .details{list-style: disc;padding-left: 30px;}
+.title_project {display: flex;justify-content: space-between;align-items: baseline;margin-bottom: 5px;}
+.name_project {font-weight: 700;font-size: 0.95em;color: #444;}
+.period_project {font-size: 0.8em;color: #999;}
+
+.tbl_education {width: 100%;border-collapse: collapse;margin-bottom: 30px;}
+.tbl_education th {text-align: left;width: 150px;color: #888;font-weight: 400;font-size: 0.9em;padding: 10px 0;}
+.tbl_education td {padding: 10px 0;color: #444;font-weight: 500;}
+
+.header-text a {font-size: 1em;color: #666;text-decoration: none;transition: color 0.3s;}
+.header-text a:hover {text-decoration: underline;}
