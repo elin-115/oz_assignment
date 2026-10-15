@@ -484,6 +484,8 @@ footer {
 }
 ```
 
+> 정렬 속성 전체(`flex-wrap`, `align-content`, `align-self`, `order` 등)와 활용 예제는 [CSS_flex_grid.md](CSS_flex_grid.md)에 정리했습니다.
+
 ## 9. 반응형 디자인과 Media Query
 
 **반응형 디자인(Responsive Design)** 은 화면 크기와 환경에 따라 레이아웃과 스타일이 자연스럽게 변하는 디자인 방식입니다. 데스크톱, 태블릿, 모바일, 가로/세로 회전처럼 사용자 환경이 다양해서 하나의 화면 크기만으로는 모두를 만족시킬 수 없습니다.
@@ -714,6 +716,8 @@ a {
     opacity: 0.5;
 }
 ```
+
+> `grid-template-areas`와 실습 파일 설명은 [CSS_flex_grid.md](CSS_flex_grid.md)에 정리했습니다.
 
 ## 11. 연습 사이트
 

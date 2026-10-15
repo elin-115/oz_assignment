@@ -17,7 +17,13 @@ section{position:relative;margin-bottom:80px;}
 section .txt_g{color:#555;font-size:1.05em;white-space:pre-line;}
 .hide{display:none;}
 .profile_photo{position:absolute;top:0;right:0;}
-.profile_photo img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #eee;}
+.profile_photo > img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #eee;}
+.profile_photo .btn_big{display:none;position:absolute;left: 0;top: 0;width: 100%;height: 100%;padding: 0;font-size: 40px;color: #7e7e7e;background-color: rgba(255, 255, 255, .7);border:0 none;}
+.profile_photo:hover .btn_big{display:block;}
+.profile_photo .dialog{background-color:transparent;}
+.profile_photo .dialog .dialog-body{padding:0;}
+.profile_photo .dialog img{width:100%;border-radius:0;box-shadow:none;object-fit:cover;}
+.profile_photo .dialog .btn-close{position:absolute;top:20px;right:20px;}
 
 /* header */
 #resume-header{display:flex;flex-wrap:wrap;gap:10px;position:fixed;top:0;left:0;right:0;height:92px;padding:20px 30px;background-color:rgba(255,255,255,.7);border-bottom:1px solid #ccc;z-index:10;box-sizing:border-box;}
@@ -62,6 +68,16 @@ h1{font-size:2.5em;line-height:1.1;color:#007a8f;}
 .tbl_resume{width:100%;border-collapse:collapse;margin-bottom:30px;}
 .tbl_resume th{text-align:left;width:150px;color:#888;font-weight:400;font-size:0.9em;padding:10px 0;}
 .tbl_resume td{padding:10px 0;color:#444;font-weight:500;}
+
+/* 화면이 300px 이하일 때 */
+@media (max-width: 300px) {
+    .container {
+        flex-direction: column;
+    }
+    .box {
+        background: orange;
+    }
+}
 
 /* print (PDF 내려받기) */
 @page{size:A4;margin:15mm;}

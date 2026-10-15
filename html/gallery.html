@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            gap: 0.8rem;
+            padding: 10%;
+            /* grid-template-columns:30% 20% 10%;
+            grid-template-columns:repeat(5, 20%); */
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-rows: repeat(4, 200px);
+            grid-template-areas: 
+                "img1 img2 img3"
+                "img1 img2 img6"
+                "img4 img2 img6"
+                "img4 img5 img5";
+        }
+        .container:hover img:not(:hover){filter:grayscale(1);opacity:0.5;}
+
+        img{width:100%;height:100%;object-fit:cover;border-radius:.6rem;}
+        .img1{grid-area: img1;}
+        .img2{grid-area: img2;}
+        .img3{grid-area: img3;}
+        .img4{grid-area: img4;}
+        .img5{grid-area: img5;}
+        .img6{grid-area: img6;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item img1"><img src="/images/JUH04316.jpg" alt=""></div>
+        <div class="item img2"><img src="/images/JUH04330.jpg" alt=""></div>
+        <div class="item img3"><img src="/images/JUH04333.jpg" alt=""></div>
+        <div class="item img4"><img src="https://scontent-icn2-1.cdninstagram.com/v/t39.30808-6/468062511_17883057432168169_6578158900533719229_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=MzM2NDYwNDQ0NjM2MzI0MTM4Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTIwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=-pJthP6ctLkQ7kNvwGLcbg4&_nc_oc=Adp1l94VFims8mlvsv9TlcbRhxvvCVJ_VCSK6z4PJ7YJGhlnCILO9nbOKCC_FVEZmfQ&_nc_zt=23&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_gid=hBonyQeihA2uAEfxZZTTYQ&_nc_ss=7b6a8&oh=00_AQNnBqpLBNTSfdKM29ICVRI7eIX0qy-TP7aFr42uVUuD1Q&oe=6AD605A5" alt=""></div>
+        <div class="item img5"><img src="/images/JUH04488.jpg" alt=""></div>
+        <div class="item img6"><img src="https://scontent-icn2-1.cdninstagram.com/v/t39.30808-6/467833653_17883056283168169_5556538144932198284_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzM2Mzc5MDQ2NzE1NzgzNzMyNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTU5LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=t1T7EjDWEU0Q7kNvwFIYX4y&_nc_oc=AdpssyMo2BX1nPeMt9C46Twr3MFGxIIrgSO70S_PKPqK41cT-dNNaYu1_Tbr1fHL5AU&_nc_zt=23&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_gid=hBonyQeihA2uAEfxZZTTYQ&_nc_ss=7b6a8&oh=00_AQN75ZgFUgBl-KP890olDWf9PVFi8r35fEid9dkuXMM04w&oe=6AD624AB" alt=""></div>
+    </div>
+</body>
+</html>
