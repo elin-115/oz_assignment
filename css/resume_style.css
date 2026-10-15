@@ -5,12 +5,12 @@
 
 /* reset */
 body{text-align:left;font-family:'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;line-height:1.6;color:#333;background-color:#f9f9f9;}
-body, h1, h2, h3, h4, h5, h6, p, ul, ol{margin:0;padding:0;}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, div{margin:0;padding:0;}
 ul, ol{list-style:none;}
 a{text-decoration:none;}
 
 /* layout / common */
-.container{min-width:900px;padding:112px 40px 40px 170px;min-height:calc(100vh - 80px);}
+.container{max-width:none;min-width:900px;padding:112px 40px 40px 170px;min-height:calc(100vh - 80px);}
 main{padding:40px;border-radius:8px;background-color:#fff;box-shadow:0 0 20px rgba(0,0,0,0.05);border-radius:8px;}
 main h2{margin-bottom:20px;padding-left:15px;border-left:5px solid #333;font-size:1.5em;color:#222;}
 section{position:relative;margin-bottom:80px;}
@@ -26,13 +26,16 @@ section .txt_g{color:#555;font-size:1.05em;white-space:pre-line;}
 .profile_photo .dialog .btn-close{position:absolute;top:20px;right:20px;}
 
 /* header */
-#resume-header{display:flex;flex-wrap:wrap;gap:10px;position:fixed;top:0;left:0;right:0;height:92px;padding:20px 30px;background-color:rgba(255,255,255,.7);border-bottom:1px solid #ccc;z-index:10;box-sizing:border-box;}
+#resume-header{position:relative;}
+.area_head{position:fixed;top:0;left:0;right:0;height:92px;padding:20px 30px;background-color:rgba(255,255,255,.9);border-bottom:1px solid #ccc;box-sizing:border-box;z-index:20;}   /* 상단 바: 스크롤되는 내용보다 위 */
 h1{font-size:2.5em;line-height:1.1;color:#007a8f;}
-.info_list{overflow:hidden;padding-top:17px;margin-left:20px}
+.info_list{overflow:hidden;position:fixed;top:36px;left:230px;z-index:21;}   /* 넓은 화면: 상단 바 안에 고정 */
 .info_list a{color:#666;font-size:0.95em;}
+.info_list a:last-of-type{display:none}
 .info_list i{width:20px;color:#555;}
-.link_git{font-family:"Archivo Black", sans-serif;position:absolute;top:50%;right:20px;width:100px;margin-top:-14px;height:32px;line-height:33px;border-radius:5px;border:1px solid #007a8f;background-color:#fff;color:#007a8f;text-decoration:none;text-align:center;}
+.link_git{font-family:"Archivo Black", sans-serif;position:fixed;top:45px;right:20px;width:100px;margin-top:-14px;height:32px;line-height:33px;border-radius:5px;border:1px solid #007a8f;background-color:#fff;color:#007a8f;text-decoration:none;text-align:center;z-index:21;}
 .link_git:hover{background-color:#007a8f;color:#fff}
+.btn_menu{display:none;position:fixed;z-index:21;top:45px;right:20px;margin-top:-25px;font-size:2em;border:0 none;background:none;color:#007a8f;}
 
 /* nav */
 .sidebar{position:fixed;top:92px;left:0;width:150px;height:calc(100vh - 72px);padding-top:40px;background-color:#007a8f;color:#fff;z-index:9;}
@@ -69,14 +72,31 @@ h1{font-size:2.5em;line-height:1.1;color:#007a8f;}
 .tbl_resume th{text-align:left;width:150px;color:#888;font-weight:400;font-size:0.9em;padding:10px 0;}
 .tbl_resume td{padding:10px 0;color:#444;font-weight:500;}
 
-/* 화면이 300px 이하일 때 */
-@media (max-width: 300px) {
-    .container {
-        flex-direction: column;
-    }
-    .box {
-        background: orange;
-    }
+/* 화면이 800px 이하일 때 */
+@media (max-width: 800px) {
+    .container{min-width:320px;padding:112px 20px 20px 20px;}
+    .sidebar{left:auto;right:-150px;transition:right 0.3s ease;}
+    .sidebar.on{right:0;z-index:15;}   /* 열리면 프로필 사진보다 위 */
+    h1{display:block;font-size:2em;}
+    main{padding:30px;}
+    #resume-header{display:block;}
+    .btn_menu{display:block;}
+    .link_git{display:none;}
+    .info_list{position:relative;top:auto;left:auto;margin-bottom: 18px;padding: 20px;border-radius: 8px;background-color: #fff;box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);z-index:auto;}   /* 좁은 화면: 스크롤되면 상단 바 아래로 */
+    .info_list a{font-size:1em;margin-right:10px;}
+    .info_list a:last-of-type{display:inline-block}
+    #introduce .txt_g{width:70%;}
+}
+
+/* 화면이 640px 이하일 때 */
+@media (max-width: 640px) {
+    .container{padding-top:100px}
+    .area_head{height:78px}
+    .btn_menu{top:38px;}
+    .info_list{display:flex;flex-wrap: wrap;gap: 6px;}
+    .sidebar{top:78px}
+    .profile_photo{top:-164px;right:-16px;z-index:10;}
+    .profile_photo > img{width:100px;height:100px}
 }
 
 /* print (PDF 내려받기) */
