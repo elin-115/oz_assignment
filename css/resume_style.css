@@ -10,7 +10,7 @@ ul, ol{list-style:none;}
 a{text-decoration:none;}
 
 /* layout / common */
-.container{max-width:none;min-width:900px;padding:112px 40px 40px 170px;min-height:calc(100vh - 80px);}
+.container{max-width:none;min-width:900px;padding:112px 20px 40px 170px;min-height:calc(100vh - 80px);}
 main{padding:40px;border-radius:8px;background-color:#fff;box-shadow:0 0 20px rgba(0,0,0,0.05);border-radius:8px;}
 main h2{margin-bottom:20px;padding-left:15px;border-left:5px solid #333;font-size:1.5em;color:#222;}
 section{position:relative;margin-bottom:80px;}
@@ -24,6 +24,7 @@ section .txt_g{color:#555;font-size:1.05em;white-space:pre-line;}
 .profile_photo .dialog .dialog-body{padding:0;}
 .profile_photo .dialog img{width:100%;border-radius:0;box-shadow:none;object-fit:cover;}
 .profile_photo .dialog .btn-close{position:absolute;top:20px;right:20px;}
+.details{list-style:disc;}
 
 /* header */
 #resume-header{position:relative;}
@@ -93,10 +94,16 @@ h1{font-size:2.5em;line-height:1.1;color:#007a8f;}
     .container{padding-top:100px}
     .area_head{height:78px}
     .btn_menu{top:38px;}
-    .info_list{display:flex;flex-wrap: wrap;gap: 6px;}
     .sidebar{top:78px}
-    .profile_photo{top:-164px;right:-16px;z-index:10;}
-    .profile_photo > img{width:100px;height:100px}
+}
+
+/* 화면이 610px 이하일 때 */
+@media (max-width: 610px) {
+    .info_list{display:flex;flex-direction:column;align-items:flex-start;gap:6px;}   /* 세로로 한 줄에 하나씩 */
+    .info_list a{font-size:.7em;}
+    .profile_photo{top:-144px;right:-16px;z-index:10;}
+    .profile_photo > img{width:90px;height:90px;}
+    #introduce .txt_g{width:100%;}
 }
 
 /* print (PDF 내려받기) */
