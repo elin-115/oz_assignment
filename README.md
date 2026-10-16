@@ -10,8 +10,9 @@ HTML · CSS 기초를 학습하며 작성한 정리 문서와 실습 파일 모�
 | 2 | [CSS.md](CSS.md) | CSS 기초 정리: 셀렉터, 박스 모델, position, Flexbox, 반응형, Grid |
 | 3 | [CSS_flex_grid.md](CSS_flex_grid.md) | Flexbox · Grid 심화: 정렬 속성 전체, grid-template-areas 갤러리 |
 | 4 | [Bootstrap.md](Bootstrap.md) | 부트스트랩: Flex · Button · Card · Grid · Navbar · Modal, v5와 v6 차이 |
-| 5 | [resume_v1.html](https://elin-115.github.io/oz_assignment/resume_v1.html) | 이력서 페이지 v1: HTML 기초 태그(목록, 표, 폼)와 외부 CSS 적용 |
-| 6 | [resume_v2.html](https://elin-115.github.io/oz_assignment/resume_v2.html) | 이력서 페이지 v2: 고정 헤더 · 사이드바 레이아웃, 실제 이력 반영 |
+| 5 | [Javascript.md](Javascript.md) | JavaScript 기초: 자료형, 변수, 연산자, 조건문, 반복문, 배열, 객체, 콘솔 계산기 |
+| 6 | [resume_v1.html](https://elin-115.github.io/oz_assignment/resume_v1.html) | 이력서 페이지 v1: HTML 기초 태그(목록, 표, 폼)와 외부 CSS 적용 |
+| 7 | [resume_v2.html](https://elin-115.github.io/oz_assignment/resume_v2.html) | 이력서 페이지 v2: 고정 헤더 · 사이드바 레이아웃, 실제 이력 반영 |
 
 ## 폴더 구조
 
@@ -22,6 +23,7 @@ oz_assignment/
 ├── CSS.md              # CSS 기초 정리
 ├── CSS_flex_grid.md    # Flexbox · Grid 정리
 ├── Bootstrap.md        # 부트스트랩 정리
+├── Javascript.md       # JavaScript 기초 정리
 ├── index.html          # 이력서 페이지 목록
 ├── resume_v1.html      # 이력서 v1
 ├── resume_v2.html      # 이력서 v2
@@ -30,8 +32,9 @@ oz_assignment/
 ├── css/
 │   ├── style.css         # resume_v1.html 스타일
 │   └── resume_style.css  # resume_v2.html 스타일
-├── js/
-│   └── app.js          # html/script.html에서 불러오는 JS
+├── js/                 # JavaScript 실습 파일 (Javascript.md 12장 참고)
+│   ├── common.js         # resume_v2.html 메뉴 버튼
+│   └── caculator.js      # html/caculator.html 콘솔 계산기
 └── images/             # 실습에 사용한 이미지
 ```
 
