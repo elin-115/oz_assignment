@@ -23,3 +23,16 @@ function runFunction(f, arg1, arg2) {
 
 let result2 = runFunction(add, 4, 2)
 console.log(result2);
+
+
+// 1. 모든 함수는 값을 "반드시" 반환한다.
+// 2. 함수를 정의할 때, return 생략
+//    a) 생략하면, return undefined
+//    b) 파이썬은, return None
+function sayHello() {
+    console.log("hello");
+    // return undefined
+}
+
+let hello = sayHello();     // Hello
+console.log(hello);         // undefined
