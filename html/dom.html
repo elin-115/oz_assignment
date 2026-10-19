@@ -5,52 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM & Event</title>
     <style>
+        body > div + div{border-top:1px solid #ececec}
         .mt20{margin-top:20px;}
-        span{
-            background-color: #880f7e;
-            padding: 5px;
-            color:#fff;
-        }
+        .evt_hover{background-color: #880f7e;padding: 5px;color:#fff;}
     </style>
 </head>
 <body>
     <h1 id="msg">Hello, DOM & Event</h1>
-    <div>
+    <h2>이벤트 리스너(Event Listener)</h2>
+    <p>: 특정 이벤트가 발생했을 때 실행할 함수</p>
+    <div class="mt20">
+        <h3>1️⃣ 3초 후 메세지 노출</h3>
         <button type="button" class="btn_g">눌러보세요</button>
+        
         <script>
-            // const btn = document.querySelector("button")
             const btn = document.querySelector(".btn_g")
 
-            function buttonAlert() {
-                alert("버튼이 클릭됨")
-            }
-
-            // 이벤트 리스너(Event Listener)
-            // -> 특정 이벤트가 발생했을 때 실행할 함수
-            btn.addEventListener("click", buttonAlert)
+            // function buttonAlert() {
+            //     alert("버튼이 클릭됨")
+            // }
+            // btn.addEventListener("click", buttonAlert)
 
             btn.addEventListener(
-                "click", 
-                () => alert("버튼이 클릭됨")    // 코드가 한줄이면 이렇게 해도 됨
-            )
-            btn.addEventListener(
-                "click", 
-                () => {
-                    alert("버튼이 클릭됨")
+                "click", () => {
+                    // setTimeout : 일정 시간이 지난 후에, 어떤 함수를 실행하는 함수
+                    setTimeout(
+                        () => {
+                            const p = document.createElement("p")
+                            p.textContent = "3초가 지났습니다"
+                            p.style.color = "red"
+                            btn.after(p)   // btn 바로 뒤에 p를 넣기
+                        },
+                        3000
+                    )
                 }
             )
+            // btn.addEventListener(
+            //     "click", 
+            //     () => alert("버튼이 클릭됨")   // 코드가 한줄이면 이렇게 해도 됨
+            // )
         </script>
     </div>
     <div class="mt20">
-        <h3>이름 입력</h3>
+        <h3>2️⃣ 이름 입력</h3>
         <input type="text" id="name-input">
-        <button type="button" id="" class="btn_check">확인</button>
-
+        <button type="button" class="btn_check">확인</button>
+        <p>이름 : <span class="name_t"></span></p>
         <script>
             const input = document.querySelector("#name-input")
             const btn_check = document.querySelector(".btn_check")
+            const name_t = document.querySelector(".name_t")
 
-            const p = document.createElement("p");
             btn_check.addEventListener(
                 "click",
                 () => {
@@ -59,30 +64,29 @@
                         return
                     } 
 
-                    p.textContent = input.value;
-                    document.body.appendChild(p);
+                    name_t.textContent = input.value;   // span 안 글자를 입력값으로 바꾸기
+                    // document.body.appendChild(p);
                     input.value = "";
                 }
             )
         </script>
     </div>
     <div class="mt20">
-        <h3>input 태스에 이벤트가 발생할때마다 이벤트</h3>        
+        <h3>3️⃣ input에 이벤트가 발생할때마다</h3>        
         <input type="password" id="pw-input" placeholder="비밀번호 입력">
-        <button type="button" class="btn_check">확인</button>
         <p id="txt_help"></p>
         <script>
             const inp_pw = document.querySelector("#pw-input")
             const txt_help = document.querySelector("#txt_help")
             inp_pw.addEventListener(
-                "click",
+                "input",     // ← 글자를 입력하거나 지울 때마다 실행
                 () => {
                     // 비밀번호 검사
-                    if (input.value.length < 4){
+                    if (inp_pw.value.length < 4){
                         txt_help.textContent = "4자리 이상 입력하세요.";
                         txt_help.style.color = "red";
                     } else {
-                        txt_help.textContent = "사용 가능한 비민번호 입니다.";
+                        txt_help.textContent = "사용 가능한 비밀번호 입니다.";
                         txt_help.style.color = "green";
                     }
                 }
@@ -90,20 +94,20 @@
         </script>
     </div>
     <div class="mt20">
-        <h3>마우스 이벤트</h3>
+        <h3>4️⃣ 마우스 이벤트</h3>
 
-        <span>마우스를 올려보세요.</span>
+        <span class="evt_hover">마우스를 올려보세요.</span>
         <script>
-            const span = document.querySelector("span")
+            const span_hover = document.querySelector(".evt_hover")
             function changeColor(color){
-                span.style.backgroundColor = color;
+                span_hover.style.backgroundColor = color;
 
             }
 
-            span.addEventListener(
+            span_hover.addEventListener(
                 "mouseover", () => changeColor("#003c82")
             );
-            span.addEventListener(
+            span_hover.addEventListener(
                 "mouseout", () => changeColor("#880f7e")
             );
         </script>

@@ -142,7 +142,7 @@ function performCalculate() {
 
     // calculate()는 계산이 안 되면 에러 문장(문자열)을 돌려줌
     if (typeof result === "string"){
-        console.log(`에러 발생: ${result}`);   // 자세한 이유는 콘솔애
+        console.log(`에러 발생: ${result}`);   // 자세한 이유는 콘솔에
         display.value = "Error";             // 화면에는 짧게
     } else {
         display.value = result;

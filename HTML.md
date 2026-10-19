@@ -12,7 +12,9 @@ HTML 기초 문법을 학습하며 작성한 실습 파일과 정리입니다.
 | [`base2.html`](html/base2.html) | 줄바꿈과 구분선 | `<br>`(줄바꿈), `<hr>`(가로 구분선). Emmet(`!`)으로 기본 템플릿 생성 |
 | [`bootstrap.html`](html/bootstrap.html) | 부트스트랩 Card | 부트스트랩 v6 CDN, 이미지 Card와 dialog 버튼. [Bootstrap.md](Bootstrap.md) 참고 |
 | [`caculator.html`](html/caculator.html) | 콘솔 계산기 | `../js/caculator.js`를 불러와 콘솔에서 `start()`로 실행. [Javascript.md](Javascript.md) 참고 |
+| [`calculator_v2.html`](html/calculator_v2.html) | 버튼 계산기 | 버튼 클릭으로 입력 · 계산, ON/OFF. [DOM_Event.md](DOM_Event.md) 참고 |
 | [`class.html`](html/class.html) | id와 class | `id`는 문서에서 중복 불가, `class`는 여러 태그에 중복 사용 가능. CSS 선택자의 기반이 되는 속성 |
+| [`dom.html`](html/dom.html) | DOM과 이벤트 | `click`·`input`·`mouseover` 이벤트, `setTimeout`, `textContent`. [DOM_Event.md](DOM_Event.md) 참고 |
 | [`form.html`](html/form.html) | 입력 폼 | `<form>`, `<input>`, `<label>`, `<button>`. GET 방식(검색창)과 POST 방식(회원가입 폼) 비교, `type="email"`/`"password"`/`"search"`, `placeholder`, `label`의 `for`와 `input`의 `id` 연결 |
 | [`gallery.html`](html/gallery.html) | Grid 갤러리 | `grid-template-areas`로 6장 배치, hover 시 흑백 처리. [CSS_flex_grid.md](CSS_flex_grid.md) 참고 |
 | [`grid.html`](html/grid.html) | Grid 기초 | `grid-template-columns`(`%`, `repeat()`, `fr`)와 `grid-template-rows`. [CSS_flex_grid.md](CSS_flex_grid.md) 참고 |
