@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-body, h1, h2, h3, p{margin:0;padding:0}
+body, h1, h2, h3, p, hr{margin:0;padding:0}
 a:active,a:hover{font-weight:bold}
 table{display:table;box-sizing:border-box;border:1px solid #000;border-collapse:separate;text-indent:initial;unicode-bidi:isolate;border-spacing:0;}
 table caption{overflow:hidden;width:1px;font-size:1px;line-height:0;text-indent:-9999px;}
@@ -22,6 +22,7 @@ label, input, button{display:inline-block;vertical-align:top;box-sizing:border-b
 input{padding:0 8px;border:1px solid #bfbfbf;line-height:28px}
 label{line-height:32px}
 button{padding:0 10px;border-radius:5px;border:0 none;background-color:#373737;color:#fff;}
+button:disabled{background-color:#e0e0e0;}
 
 #wrap{min-width:400px;}
 .box_g{position:relative;margin-bottom:20px;padding:20px;border-radius:5px;border:1px solid #ddd}

@@ -12,8 +12,9 @@ HTML · CSS 기초를 학습하며 작성한 정리 문서와 실습 파일 모�
 | 4 | [Bootstrap.md](Bootstrap.md) | 부트스트랩: Flex · Button · Card · Grid · Navbar · Modal, v5와 v6 차이 |
 | 5 | [Javascript.md](Javascript.md) | JavaScript 기초: 자료형, 변수, 연산자, 조건문, 반복문, 배열, 객체, 콘솔 계산기 |
 | 6 | [DOM_Event.md](DOM_Event.md) | DOM과 이벤트: 요소 선택 · 변경, 이벤트 리스너, 화살표 함수, 타이머, 버튼 계산기 v2 |
-| 7 | [resume_v1.html](https://elin-115.github.io/oz_assignment/resume_v1.html) | 이력서 페이지 v1: HTML 기초 태그(목록, 표, 폼)와 외부 CSS 적용 |
-| 8 | [resume_v2.html](https://elin-115.github.io/oz_assignment/resume_v2.html) | 이력서 페이지 v2: 고정 헤더 · 사이드바 레이아웃, 실제 이력 반영 |
+| 7 | [WebAPI.md](WebAPI.md) | Web API: DOM · Event · Timer · Storage · Fetch, 뽀모도로 타이머, 암호화폐 추적기 |
+| 8 | [resume_v1.html](https://elin-115.github.io/oz_assignment/resume_v1.html) | 이력서 페이지 v1: HTML 기초 태그(목록, 표, 폼)와 외부 CSS 적용 |
+| 9 | [resume_v2.html](https://elin-115.github.io/oz_assignment/resume_v2.html) | 이력서 페이지 v2: 고정 헤더 · 사이드바 레이아웃, 실제 이력 반영 |
 
 ## 폴더 구조
 
@@ -26,6 +27,7 @@ oz_assignment/
 ├── Bootstrap.md        # 부트스트랩 정리
 ├── Javascript.md       # JavaScript 기초 정리
 ├── DOM_Event.md        # DOM과 이벤트 정리
+├── WebAPI.md           # Web API 정리
 ├── index.html          # 이력서 페이지 목록
 ├── resume_v1.html      # 이력서 v1
 ├── resume_v2.html      # 이력서 v2

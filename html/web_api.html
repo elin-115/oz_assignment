@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{padding:30px 0;}
+        h1{padding:0 30px;}
+        h2{padding-bottom:10px;color:#359a9e;}
+
+        .mt10{margin-top:10px;}
+        .mt20{margin-top:20px;}
+        .wrap{padding:20px 30px;}
+        .list_index{padding:20px;border-radius:8px;border:1px solid #ddd;list-style:none;}
+        .list_index li +li{margin-top:10px;}
+        .list_index strong{display:block;}
+        .list_index p{padding-left:14px;margin-top:5px;}
+        .box_item{margin-top:30px;padding-top:20px}
+        .box_item+.box_item{border-top:1px solid #ddd;}
+        .box_item p{margin-top:10px;}
+        .box_item strong{display:block;}
+        .box_item button{margin-top:10px;padding:10px 12px;font-size:14px;}
+        .box_item ul{margin-left:10px;}
+        .btn_g + span{display:inline-block;margin-top:10px;margin-left:20px;line-height:37px;vertical-align:top;}
+    </style>
+</head>
+<body>
+    <h1 id="msg">Web API</h1>
+    <hr>
+    <div class="wrap">
+        <ul class="list_index">
+            <li>
+                <strong>1. DOM API</strong>
+                <p>document.querySelector, element.textContent</p>
+            </li>
+            <li>
+                <strong>2. Event API</strong>
+                <p>addEventListener</p>
+            </li>
+            <li>
+                <strong>3. Timer API</strong>
+                <p>setTimeout, setInterval</p>
+            <li>
+                <strong>4. Storage API</strong>
+                <p>localStorage, sessionStorage</p>
+            </li>
+            <li>
+                <strong>5. Fetch API</strong>
+                <p>서버와 통신 (fetch)</p>
+            </li>
+        </ul>
+        <div class="box_item">
+            <h2>Timer API</h2>
+            <div>
+                <h3>① setTimeout</h3>
+                <p>일정 시간이 지난 뒤에 함수를 한 번 실행하는 Web API</p>
+                <button type="button" class="btn_g">눌러보세요</button>
+                <script>
+                    const btn = document.querySelector(".btn_g")
+
+                    btn.addEventListener(
+                        "click", () => {
+                            // setTimeout : 일정 시간이 지난 후에, 어떤 함수를 실행하는 함수
+                            setTimeout(
+                                () => {
+                                    const span = document.createElement("span")
+                                    span.textContent = "⏳ 3초가 지났습니다"
+                                    span.style.color = "red"
+                                    btn.after(span)   // btn 바로 뒤에 span를 넣기
+                                },
+                                3000
+                            )
+                        }
+                    )
+                </script>
+            </div>
+            <div class="mt20">
+                <h3>② setInterval</h3>
+                <p>일정 시간마다 함수를 반복 실행하는 Web API</p>
+                <script>
+                    // setInterval(
+                    //     () => console.log("3초 경과")
+                    // )
+                </script>
+            </div>
+        </div>
+
+        <div class="box_item">
+            <h2>Storage API</h2>
+            <p>- 브라우저가 제공하는 클라이언트 측 저장소(Web API)</p>
+            <p>- 서버 없이도 데이터를 브라우저에 저장/조회</p>
+            <strong class="mt10">특징</strong>
+            <ul>
+                <li>키(key) / 값(value) 형태로 데이터 저장</li>
+                <li>값은 문자열(string)로 저장</li>
+                <li>페이지 새로고침 후에도 유지</li>
+            </ul>
+            <div class="mt20">
+                <h3>① localStorage</h3>
+                <p>민감하지않은 정보만 넣어야 한다</p>
+                <ul>
+                    <li>영구 저장(브라우저를 껐다 켜도 남아 있음)</li>
+                    <li>로그인 정보, 설정값 저장에 사용</li>
+                    <li>만료 시간 없음</li>
+                </ul>
+                <script>
+                    localStorage.setItem("name", "alex");
+                    localStorage.getItem("name");
+                    localStorage.removeItem("name")
+                </script>
+            </div>
+            <div class="mt20">
+                <h3>② sessionStorage</h3>
+                <ul>
+                    <li>세션 단위 저장(브라우저(탭) 닫으면 삭제)</li>
+                    <li>임시 데이터</li>
+                    <li>같은 사이트라도 탭마다 별도</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box_item">
+            <h2>Fetch API</h2>
+            <p>- 서버와 통신 (fetch)</p>
+            <p>- 브라우저가 제공하는 서버 통신용 Web API</p>
+            <p>- 서버에 HTTP 요청을 보낼 수 있도록 도와주는 API</p>
+            <ul class="">
+                <li>HTTP 요청(Request)을 보내고 응답(Response)을 수신</li>
+                <li>비동기로 동작</li>
+            </ul>
+            <strong class="mt10">비동기(Asyncronous)</strong>
+            <ul>
+                <li>오래 걸리는 작업을 기다리지 않고, 다음 코드를 먼저 실행하는 방식(=일시정지)</li>
+                <li>서버 요청은 시간이 걸리기 때문에 요청은 보내고, 다른 작업을 계속 진행</li>
+                <li>fetch는 서버에 요청을 보내고, 응답이 오면 그때 결과를 처리</li>
+            </ul>
+            <p>참고 : <a href="https://jsonplaceholder.typicode.com/posts">https://jsonplaceholder.typicode.com/posts</a></p>
+            
+            <button id="load">불러오기</button>
+            <ol id="list"></ol>
+
+            <script>
+                // let response = fetch()
+                // let ... = response.json()
+
+                // 비동기 프로그래밍
+                // fetch(
+                //     "https://jsonplaceholder.typicode.com/posts", {
+                //         method: "POST",
+                //         headers: {"Content-Type": "application/json"},
+                //         body: JSON.stringify(
+                //             {"title": "", "body": "Hello, Python"}
+                //         )
+                //     }
+                // )
+                //     // 메소드 체이닝 
+                //     // 응답에서 JSON만 추출   
+                //     .then(//함수
+                //         response => response.json()
+                //     )
+                //     // JSON 데이터를 화면에 출력
+                //     .then(data => console.log(data))
+
+                const button = document.querySelector("#load")
+                const list = document.querySelector("#list")
+
+                let posts = null;
+                let start = 0;
+                let end = 5;
+
+                button.addEventListener("click", () => {
+                    fetch("https://jsonplaceholder.typicode.com/posts")
+                        .then((response) => {
+                            if (!response.ok) {
+                                throw new Error("네트워크 응답에 문제가 있습니다.");
+                            }
+                            return response.json();
+                        })
+                        .then((posts) => {
+                            // if (list.innerHTML !== "") {     // 이미 그렸으면 또 안 그림
+                            //     return;
+                            // }
+
+                            // 이번에 보여 줄 5개: start번부터 end번 직전까지 (0~4 → 5~9 → 10~14 ...)
+                            for (const post of posts.slice(start, end)) {
+                                const li = document.createElement("li");
+                                li.textContent = post.title;
+                                list.appendChild(li);
+                            }
+
+                            // 다음 클릭 때는 그다음 5개 (응답이 온 뒤에 늘려야 이번 목록이 0번부터 나옴)
+                            start += 5;
+                            end += 5;
+
+                            // 더 보여 줄 글이 없으면 버튼 끄기
+                            if (start >= posts.length) {
+                                button.disabled = true;
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Fetch 에러:", error);  // 위에서 난 에러를 전부 여기서 잡음
+                        });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
