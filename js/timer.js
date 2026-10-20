@@ -1,6 +1,7 @@
 const timeInput = document.querySelector("#time-input")
 const startBtn = document.querySelector("#start-timer")
 const stopBtn = document.querySelector("#stop-timer")
+const resetBtn = document.querySelector("#reset-timer")
 const display = document.querySelector("#timer-display")
 let intervalId = null;
 let remainingSeconds = 0;   // 남은 시간(초)
@@ -50,4 +51,14 @@ startBtn.addEventListener("click", () => {
 // 중지 버튼이 눌렸을때, 타이머 멈추기
 stopBtn.addEventListener("click", () => {
     clearInterval(intervalId);
+})
+
+// 리셋 버튼이 눌렸을때, 타이머 멈추고 처음 상태로 되돌리기
+resetBtn.addEventListener("click", () => {
+    clearInterval(intervalId);              // 돌고 있던 타이머 멈추기
+    remainingSeconds = 0;                   // 남은 시간 초기화
+    timeInput.value = "";                   // 입력칸 비우기
+    startBtn.textContent = "시작";           // "재시작" → "시작"
+    display.className = "fs-3 text-muted";  // 처음 흐린 글자색으로
+    display.textContent = "시간을 설정하세요.";
 })

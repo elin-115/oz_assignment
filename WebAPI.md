@@ -251,6 +251,19 @@ stopBtn.addEventListener("click", () => {
 });
 ```
 
+**리셋** — 타이머를 멈추고 처음 화면으로 되돌립니다. 중지는 남은 시간을 그대로 두고, 리셋은 전부 지웁니다.
+
+```js
+resetBtn.addEventListener("click", () => {
+    clearInterval(intervalId);              // 돌고 있던 타이머 멈추기
+    remainingSeconds = 0;                   // 남은 시간 초기화
+    timeInput.value = "";                   // 입력칸 비우기
+    startBtn.textContent = "시작";           // "재시작" → "시작"
+    display.className = "fs-3 text-muted";  // 처음 흐린 글자색으로
+    display.textContent = "시간을 설정하세요.";
+});
+```
+
 ---
 
 ## 6. Storage API
@@ -548,7 +561,7 @@ setInterval(fetchPrices, 1000);   // 그 뒤로 1초마다
 | 파일 | 내용 | 쓴 API |
 | --- | --- | --- |
 | [`html/web_api.html`](html/web_api.html) | Web API 예시 목록, 3초 후 메시지, Storage 설명, posts 5개씩 불러오기 | Timer, Storage, Fetch |
-| [`html/timer.html`](html/timer.html) + [`js/timer.js`](js/timer.js) | 뽀모도로 타이머 (분 입력 → `MM:SS` 카운트다운, 중지) | Timer, Event, DOM |
+| [`html/timer.html`](html/timer.html) + [`js/timer.js`](js/timer.js) | 뽀모도로 타이머 (분 입력 → `MM:SS` 카운트다운, 중지, 리셋) | Timer, Event, DOM |
 | [`html/cryptocurrency.html`](html/cryptocurrency.html) + [`js/cryptocurrency.js`](js/cryptocurrency.js) | 암호화폐 가격 변동 추적기 | Fetch, Timer, Storage, Event, DOM |
 
 ---
